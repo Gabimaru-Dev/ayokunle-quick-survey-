@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WhatsApp Bot Survey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #0f0f13;
+      font-family: "Segoe UI", sans-serif;
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: #1c1c2c;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #8b8bff;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #ccc;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #2a2a3f;
+      color: white;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      background: #6a11cb;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #2575fc;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>WhatsApp Bot Survey</h2>
+    <form id="surveyForm">
+      <label>Your coding skill level:</label>
+      <select name="skill">
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Pro</option>
+      </select>
+
+      <label>Which bot base do you use?</label>
+      <select name="base">
+        <option>Baileys MD</option>
+        <option>Baileys Pro</option>
+        <option>Web API</option>
+        <option>Multi-Device</option>
+        <option>Custom Build</option>
+      </select>
+
+      <label>Have you tested bugs on bots?</label>
+      <select name="bugs">
+        <option>Yes - for learning</option>
+        <option>Yes - for fun</option>
+        <option>No</option>
+      </select>
+
+      <label>Do you use anti-bug protection?</label>
+      <select name="antibug">
+        <option>Yes - advanced</option>
+        <option>Yes - basic</option>
+        <option>No</option>
+      </select>
+
+      <label>Update frequency of your bot:</label>
+      <select name="update">
+        <option>Every day</option>
+        <option>Weekly</option>
+        <option>Monthly</option>
+        <option>Rarely</option>
+      </select>
+
+      <label>Do you share or sell your bot?</label>
+      <select name="share">
+        <option>Free public</option>
+        <option>Premium / sell</option>
+        <option>Private use only</option>
+      </select>
+
+      <label>Features you want added (optional):</label>
+      <input type="text" name="feature" placeholder="e.g. Auto-anti bug detector">
+
+      <label>Telegram (optional):</label>
+      <input type="text" name="telegram" placeholder="@yourhandle">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("surveyForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("✅ Thanks for submitting the WhatsApp MD Bot Survey!");
+    });
+  </script>
+</body>
+</html>
